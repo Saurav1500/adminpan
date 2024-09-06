@@ -1,0 +1,14 @@
+body{
+    background:  rgba(0,0,0,0.4);
+    text-align: left;
+}
+.popup{
+    justify-content: center;
+    transform: translateY(15rem);
+    border: solid;
+    width: 20rem;
+    height: 15rem;
+    margin: auto;
+    padding-top: 10%;
+    margin-left:20px;
+}

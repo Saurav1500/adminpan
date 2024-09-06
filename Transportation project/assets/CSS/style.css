@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border:none;
+    list-style: none;
+    appearance: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    font-size: 1.06rem;
+    user-select: none;
+    overflow-x:hidden;
+    background: #f6f6f9;
+}
+
+.container{
+    display: grid;
+    width: 95%;
+    gap:1.9rem;
+    grid-template-columns: 14rem auto;
+    margin:0 auto;
+}
+a{
+    color:#363949;
+}
+.logo_color{
+color:chocolate;
+}
+.profilePhoto{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius:50;
+    overflow: hidden;
+}
+/* Aside */
+aside{
+    height: 100vh;
+}
+
+aside .top{
+    background-color: #ffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1.5rem;
+
+}
+
+aside .logo{
+    display: flex;
+    gap:1rem;
+    font-size: x-large;
+}
+
+aside .top div.close{
+    display: none;
+}
+/* sidebar */
+aside .sidebar{
+    margin-top: 20px;
+    background-color: #ffff;
+    display: flex;
+    flex-direction:column;
+    height: 85vh;
+    position:relative;
+    top:1rem;
+
+}
+aside>div h2{
+    font-weight: bold;
+
+}
+
+aside .sidebar a{
+    display: flex;
+    color:rgba(37, 29, 29, 0.752);
+    margin-left: 1.5rem;
+    gap:1rem;
+    align-items:center;
+    height: 3.2rem;
+    transition: all .1s ease-in ;
+}
+
+aside .sidebar a span{
+    font-size: 1.2rem;
+    transition:all .1s ease-in;
+}
+
+/* aside .sidebar a:last-child{
+    position: absolute;
+    bottom: 1rem;
+    width: 100;
+} */
+
+aside .sidebar a.active{
+    background: #dce1dc;
+    color:#7380ec;
+    margin-left: 0;
+    /* border-left: 5px solid #7380ec; */
+}
+
+aside .sidebar a.active::before{
+    content:'';
+    width: 6px;
+    height: 100%;
+    background-color:#7380ec ;
+}
+
+aside .sidebar a:hover{
+    color:#7380ec;
+}
+
+aside .sidebar a:hover:not(.active) span{
+    margin-left: 1rem;
+    transition: .6s ease;
+}
+
+aside .sidebar a span.message_count{
+     background:rgba(250,119,130,1);
+    color:white;
+    border-radius: 4px;
+    padding: 2px 5px;
+    font-size: 13px;
+}
+/* aside section end */
+
+/* main section start */
+main{
+    margin-top:2.2rem ;
+    width: auto;
+}
+
+/* main section logout button arrange */
+
+main .logout a{
+    right:2.5rem;
+    position:absolute;
+    color:red;    
+}
+main .logout a:hover{
+    margin-top:-5px;
+    
+    transition: 0.25s ease-;
+}
+/* end of welcome */
+main .boxes{
+    margin-right: 5rem;
+    margin-left: 3rem;
+    margin-top:4rem ;
+    display: grid;
+    grid-column-gap:3rem ;
+    grid-row-gap:3rem ;
+    grid-template-columns:repeat(4,1fr);
+}
+main .boxes>div{
+    background-color:#fff;
+    padding:1.8rem ;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    transition: all .3 ease ;
+    width: 15rem;
+    height: 12.5rem;
+}
+main .book_box:hover,.bus_box:hover,.route_box:hover,.seat_box:hover,.passenger_box:hover{
+    box-shadow: 10px 2px 10px 2px rgb(114, 225, 250);
+    margin-top:5px;
+}
+.book_box h3,.bus_box h3,.route_box h3,.seat_box h3,.passenger_box h3{
+    border-bottom:solid 3px #363949;
+    border-top: solid 3px #363949;
+    text-align: center;
+    margin: auto;
+}
+
+/* *******************
+Media Query
+********************/
+@media screen and (max-width:1200px){
+    .container{
+        width: 95%;
+        grid-template-columns: 7rem auto;
+    }
+    aside .sidebar{
+        height:100%;
+        width:12rem;
+    }
+    aside .sidebar h2{
+        display: none;
+    }
+    aside small{
+        font-size: 2.2rem;
+    }
+    aside>div span{
+        margin:0 3rem;
+    }
+    main .boxes{
+            margin-left: 7rem;
+            margin-top: 2rem;
+            display: grid;
+            grid-column-gap: 1rem;
+            grid-row-gap: 1rem;
+            grid-template-columns: repeat(2, 1fr);
+            }
+     main .logout {
+           margin-left: 4rem;
+           }
+
+        aside .sidebar a {
+            display: flex;
+            color: rgba(37, 29, 29, 0.752);
+            margin-left: 1.5rem;
+            gap: 3rem;
+            align-items: center;
+            height: 3.2rem;
+            transition: all .1s ease-in;
+        }
+                aside .sidebar a:hover:not(.active) span {
+                    margin-left: 5rem;
+                    transition: .6s ease;
+                }
+
+}
+
+/*Meadia query for androids */
+@media screen and (max-width:767px){
+        .container {
+                width: 95%;
+                grid-template-columns: 7rem auto;
+            }
+        
+            aside .sidebar {
+                height: 1200px;
+                width:13rem;
+            }
+        
+            aside .sidebar h2 {
+                display: none;
+            }
+            aside .sidebar span{
+            margin-left: 4rem;
+            }
+        
+            aside small {
+                font-size: 2.2rem;
+            }
+        
+            aside>div a span {
+                margin: 2rem 2.9rem;
+                font-size: larger;
+            }
+        
+            main .boxes {
+            
+                margin-top:0 10rem; 
+                text-align: center;
+                display: grid;
+                grid-row-gap: 1rem;
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+}
+
+
+/* Passenger Id */
+main .logout button{
+    width: 10rem;
+    height: 2rem;
+    border: solid;
+    color: white;
+    background-color: black;
+    border-radius: 30px;
+}
+main table,th,td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+main table{
+    width: 70rem;
+    height: fit-content;
+    margin-left: 4rem;
+    text-align: center;
+}
+main th{
+    padding: 2px 12px;
+}
+
+
+/*******************
+Search Box
+********************/
+main .search{
+    margin-left: 6rem;
+    width:15rem;
+    height: fit-content;
+    font-size: large;
+    
+} 
+main .search button{
+    cursor: pointer;
+    border-radius: 25px;
+    width:2rem;
+}
+main .logout button{
+    cursor: pointer;
+}
